@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff9a56">
+  <meta name="description" content="Pick-A-Dish สุ่มเมนูอาหารจานโปรดสำหรับมื้อนี้">
+  <title>Pick-A-Dish | Week15</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style15.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <span class="topbar__meta topbar__meta--left">69070008</span>
+      <h1 class="brand">Pick-A-<span>Dish</span></h1>
+      <span class="topbar__meta topbar__meta--right">Week15</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="stage" aria-label="สุ่มเมนูอาหาร">
+      <div class="dish-card" id="dishCard">
+        <div class="dish-card__media">
+          <div class="dish-card__empty" id="emptyState">
+            <svg class="empty-art" viewBox="0 0 180 140" fill="none" aria-hidden="true">
+              <ellipse cx="90" cy="121" rx="58" ry="9" fill="#7a3f1d" fill-opacity=".13"/>
+              <path d="M123 45c8-10 0-16 2-27" stroke="#fffaf0" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+              <path d="M98 39c7-8 0-13 1-23" stroke="#fffaf0" stroke-width="5" stroke-linecap="round" opacity=".78"/>
+              <path d="M73 42c6-8 0-13 1-21" stroke="#fffaf0" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+              <path d="M34 68h112c-3 30-24 49-56 49S37 98 34 68Z" fill="#e8523f"/>
+              <path d="M34 68h112c-1 10-4 19-9 27H43c-5-8-8-17-9-27Z" fill="#ff6b35" fill-opacity=".82"/>
+              <ellipse cx="90" cy="68" rx="56" ry="12" fill="#ffd166"/>
+              <path d="M52 66c8-6 15-5 21 0s13 6 20 0 13-6 21 0" stroke="#fff4cf" stroke-width="4" stroke-linecap="round"/>
+              <path d="M60 59c10-10 20 3 30-6 7-7 15 2 24-3" stroke="#7fae62" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="72" cy="74" r="5" fill="#e8523f"/>
+              <circle cx="108" cy="76" r="4" fill="#7fae62"/>
+              <path d="M23 48 146 26" stroke="#a8672b" stroke-width="4" stroke-linecap="round"/>
+              <path d="M21 56 144 34" stroke="#c88742" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <p>มื้อนี้กินอะไรดี?</p>
+            <span>กดปุ่มด้านล่างเพื่อให้เราสุ่มเมนูให้</span>
+          </div>
+          <img class="dish-card__image" id="dishImage" alt="" decoding="async">
+          <span class="dish-card__stamp">เมนูวันนี้</span>
+        </div>
+
+        <div class="dish-card__body">
+          <p class="dish-card__kicker">Today&apos;s Pick</p>
+          <h2 class="dish-card__name" id="dishName">รอสุ่มเมนูอร่อย ๆ</h2>
+          <p class="dish-card__desc" id="dishDesc">ให้ Pick-A-Dish ช่วยเลือกเมนูที่ใช่สำหรับมื้อนี้</p>
+          <div class="dish-card__price-row">
+            <span class="dish-card__price-label">ราคา</span>
+            <span class="dish-card__price" id="dishPrice">-- บาท</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="pick-button" id="pickButton" type="button" aria-label="Click to Pick สุ่มเมนูอาหาร">
+        <svg class="pick-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.8-1.1 2-1.7 3.3-1.7H22"/>
+          <path d="m18 2 4 4-4 4"/>
+          <path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"/>
+          <path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.7l-.8-1.2"/>
+          <path d="m18 14 4 4-4 4"/>
+        </svg>
+        <span>Click to Pick</span>
+      </button>
+    </section>
+  </main>
+
+  <p class="visually-hidden" id="liveResult" aria-live="polite"></p>
+  <script src="script15.js"></script>
+</body>
+</html>
